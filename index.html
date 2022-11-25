@@ -6,57 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
-    <title>Binge Watch</title>
+    <title>FIND MOVIE</title>
+    
 </head>
 
 
-<body id="oooo">
-    <div id="main-app">
+<body id="b1">
+    <div id="me">
         <div id="search">
-            <h1><u><b>SEARCH YOUR FAVOURITE MOVIES</b></u></h1>
-            <input type="text" id="srch" />
-            <button id="btn" onclick="load()">Search</button>
+            <h1><u><b>FIND MOVIES</b></u></h1>
+            <input type="text" id="t1" />
+            <button id="btn" onclick="call()">TAP HERE</button>
 
         </div>
         <div id="backgroundChange">
-            <input type="radio" onclick="change('grey')" name="bac" id="grey" value="grey">
-            <input type="radio" onclick="change('pink')" name="bac" id="pink" value="pink">
-            <input type="radio" onclick="change('blue')" name="bac" id="blue" value="blue">
             <input type="radio" onclick="change('green')" name="bac" id="green" value="green">
+            <input type="radio" onclick="change('pink')" name="bac" id="pink" value="pink">
+           
+            <input type="radio" onclick="change('grey')" name="bac" id="grey" value="grey">
             <input type="radio" onclick="change('black')" name="bac" id="black" value="black">
+       
+         <input type="radio" onclick="change('blue')" name="bac" id="blue" value="blue">
         </div>
 
 
 
 
-        <div id="app">
+
+        <div id="d2">
 
         </div>
     </div>
-    <!-- <script src="/brain.js"></script> -->
+    
     <script>
         function change(ref) {
             console.log(ref)
 
-            document.getElementById('oooo').style.backgroundColor = ref;
+            document.getElementById('b1').style.backgroundColor = ref;
             if (ref === 'black') {
                 document.getElementById('search').style.color = 'white'
             }
         }
 
-        function load() {
+        function call() {
 
 
-            const x = document.getElementById("srch")
+            const x = document.getElementById("t1")
             fetch('https://api.tvmaze.com/search/shows?q=' + x.value).then(res => res.json()).then(
                 res => {
                     console.log(res[0].show.image.medium)
                     var t = "";
                     res.map((r) => {
                         if (r.show.image != null)
-                            t += '<img src="' + r.show.image.medium + '" alt="" width="260" height="320">'
+                            t += '<img src="' + r.show.image.medium + '" alt="" width="250" height="310">'
                     })
-                    document.getElementById('app').innerHTML = t;
+                    document.getElementById('d2').innerHTML = t;
 
                 }
             )
