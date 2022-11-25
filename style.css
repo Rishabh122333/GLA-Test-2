@@ -1,63 +1,51 @@
 * {
     margin: 0;
-
     padding: 0;
 }
 
-
 body {
-
-
-    background-color: rgb(229, 229, 229);
+    background-color: rgb(170, 163, 163);
 }
 
 #search h1 {
-
     text-align: center;
-    padding-bottom: 30px;
-    padding-top: 10px;
+    padding-bottom: 35px;
+    padding-top: 11px;
 }
 
 #search {
-
     margin-top: 20px;
-    border: 5px solid rgb(179, 177, 177);
+    border: 5px solid rgb(121, 119, 119);
 }
 
 #search input {
-
     padding-left: 7px;
-    font-size: large;
+    font-size: medium;
     margin: 20px;
     width: 300px;
     height: 40px;
 }
 
 #btn {
-
     padding: 9px;
     width: 90px;
-    font-size: large;
+    font-size: medium;
 }
 
-#main-app {
-
+#me {
     width: 90vw;
     margin: auto
 }
 
-#app {
-
-    border: 5px solid rgb(179, 177, 177);
+#d2 {
+    border: 5px solid rgb(110, 108, 108);
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px
-
 }
 
 #backgroundChange {
-
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -68,40 +56,30 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     width: 40vw;
-    background-color: rgb(80, 170, 249);
+    background-color: aliceblue;
     height: 50px;
 }
 
 #backgroundChange input {
-
     scale: 2;
 }
 
 input[id="pink"]:checked {
-
-    accent-color: pink;
+    accent-color: rgb(247, 170, 183);
 }
 
 input[id="grey"]:checked {
-
-    accent-color: rgb(251, 245, 245);
-
-
+    accent-color: rgb(161, 161, 161);
 }
 
 input[id="blue"]:checked {
-
-    accent-color: rgb(64, 64, 255);
+    accent-color: rgb(43, 43, 245);
 }
 
 input[id="green"]:checked {
-
-    accent-color: rgb(25, 255, 63);
-
+    accent-color: rgb(31, 247, 67);
 }
 
 input[id="black"]:checked {
-
     accent-color: rgb(0, 0, 0);
-    
 }
